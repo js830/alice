@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135.313" height="52.318" viewBox="0 0 135.313 52.318">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_13" data-name="사각형 13" width="135.313" height="52.318" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="logo" transform="translate(0 0)">
+    <g id="그룹_1" data-name="그룹 1" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="패스_1" data-name="패스 1" d="M35.753,5.9s-5.5-12.1-19.985-1.65c0,0-10.084,4.217-6.967,20.535,0,0,4.217,10.818,4.4,14.485,0,0,.088,5.134-5,4.4,0,0-5.636-1.65-8.2-5.867,0,0,0,8.068,8.8,7.334,0,0,5.317.917,10.818-5.134a12.964,12.964,0,0,0-.184-12.1,9.264,9.264,0,0,1-1.558-6.418,22.745,22.745,0,0,1,4.308,7.884S25.119,36.889,22,40.739c0,0,6.051-1.283,7.334-14.668,0,0-1.1-10.267-5.317-15.034,0,0-4.584-9.717,4.767-8.8,0,0,4.4.55,6.967,3.667" transform="translate(0 0)" fill="#6aae27"/>
+      <text id="IMPOL" transform="translate(31.473 37.586)" fill="#362f2d" font-size="36" font-family="BMJUA, BM JUA_TTF"><tspan x="0" y="0">I</tspan><tspan y="0" letter-spacing="0.02em">M</tspan><tspan y="0">P</tspan><tspan y="0" letter-spacing="0.019em">O</tspan><tspan y="0">L</tspan></text>
+    </g>
+  </g>
+</svg>
