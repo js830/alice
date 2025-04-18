@@ -101,6 +101,7 @@ header .inner .shop {
     background: url(../images/network_bg.jpg) no-repeat center center / cover;
     margin: 112px 0 0 0;
     height: 500px;
+    display: flex;
     color: rgba(255,255,255,0.8);
 }
 .network h2 {
@@ -240,4 +241,5 @@ footer .f_info {
 footer .f_info .group {
     display: flex;
     gap: 30px;
+    margin-bottom: 20px;
 }
