@@ -6,7 +6,7 @@ body {
     color: #333;
   }
   
-  /* 중앙 정렬용 컨테이너 */
+  /* 중앙 */
   .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -14,20 +14,20 @@ body {
     padding: 20px;
   }
   
-  /* 헤더 제목 */
+  /* 헤더 */
   h1 {
     font-size: 2em;
     margin-bottom: 10px;
   }
   
-  /* 설명 텍스트 */
+  /* 설명  */
   .description {
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: 20px;
   }
   
-  /* 버튼 스타일 */
+  /* 버튼  */
   .btn {
     display: inline-block;
     padding: 10px 20px;

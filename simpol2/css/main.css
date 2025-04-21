@@ -1,0 +1,62 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+header {
+    height: 90px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 23px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    color: #1d1d1d;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 90px;
+    padding: 0 30px 0 30px;
+}
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    height: 600px;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    padding: 203px 0 9px 0;
+}
+.product {
+    margin: 152px 0 0 0;
+}
+.product .tit h2 {
+    color: #1C3C0A;
+}
+.product .tit p {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 10px 0 0 0;
+    letter-spacing: -0.03em;
+}
+.product .list {
+    margin: 63px 0 0 0;
+}
+.product .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.product .list ul li {
+    width: 404px;
+}
+.product .list ul li a h3 {
+    font-size: 20px;
+}
