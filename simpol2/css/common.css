@@ -19,4 +19,12 @@ body {
    /* wrapper의 사이즈 + 좌우에 줄 최소여백 (가로스크롤바
       1260 +30 + 30 = 1320px
    */
+   position: relative;
+   /* header가 wrap을 기준으로 정렬하기 위해서 */
+}
+.blind {
+   /* html 표준에 따르자면 글자를 써야하는데 디자인에는 글자가 없어서
+   글자를 없애는 클래스 */
+   text-indent: -999px; /* 글자를 구석으로 보냄 */
+   width: 1px;
 }
