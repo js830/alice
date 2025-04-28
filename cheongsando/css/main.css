@@ -332,6 +332,82 @@ header .tnb a::before {
     border-radius: 10px;
     background-color: rgba(0, 38, 75, 0.8);
     backdrop-filter: blur(4px);
+    padding: 30px 24px 0 30px;
+    /* 높이로 제한하고 있기 때문에 하단 여백 안줌 */
+    position: relative; /* more 정렬의 기준 */
+}
+.community .inner .notice:hover {
+    background-color: #091B65
+}
+.community .inner .notice h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 0 0 10px 0;
+}
+.community .inner .notice .list {
+    margin: 20px 0 0 0;
+}
+.community .inner .notice .list ul li {
+    
+}
+.community .inner .notice .list ul li a {
+    display: flex; /* strong span 을 좌우로 배치 */
+    justify-content: space-between;
+    padding: 5px 0 5px 0;
+}
+.community .inner .notice .list ul li a strong {
+    width: calc(100% - 90px);
+    /* 100%에서
+       옆에 날짜 넓이 + 둘사이여백을 뺌
+       
+       1줄제한 */
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+}
+.community .inner .notice .list ul li a:hover strong {
+    font-weight: 800;
+}
+.community .inner .notice .list ul li a span {
+    width: 80px;
+    /* 날짜는 자릿수가 늘지 않음
+       25-1-1 이렇게 표시하면 자릿수가 변동됨
+       그래서 날짜표기는 25-01-01 이렇게 표시 - 자릿수를 변동시키지 않기 위해
+       제일 넓은 숫자를 기준으로 최대 넓이를 고정값으로 줌 */
+       font-size: 15px;
+       color: rgba(255,255,255,0.8);
+       text-align: center;
+}
+.community .inner .notice .more {
+    position: absolute; /* notice를 기준으로 정렬 */
+    right: 24px;
+    top: 31px;
+    padding: 0 20px 0 0; /* 아이콘을 배치할 영역까지 more로 잡혀야함 */
+    color: rgba(255,255,255,0.8);
+}
+.community .inner .notice .more::after {
+    content: ""; /* 필수 */
+    position: absolute; /* more 기준으로 정렬 */
+    right: 0;
+    top: 9px;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_131_12' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_131_12)'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.community .inner .notice .more:hover {
+    font-weight: 800;
+}
+.community .inner .notice .more:hover::before {
+    content: "";
+    position: absolute; /* more를 기준으로 정렬 */
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 5px);
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
 }
 .community .inner .link {
     width: 316px;
@@ -352,13 +428,16 @@ header .tnb a::before {
     display: block;
     height: 136px;
     border-radius: 10px;
-    border-color: rgba(0, 38, 75, 0.8);
+    background-color: rgba(0, 38, 75, 0.8);
     backdrop-filter: blur(4px);
     padding: 30px 0 0 30px;
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
     position: relative; /* after 정렬의 기준 */
+}
+.community .inner .link ul li a:hover {
+    background-color: #091B65;
 }
 .community .inner .link ul li a::after {
     content: "";
@@ -383,5 +462,47 @@ header .tnb a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_47_77' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_47_77)'%3E%3Cpath d='M2 22L7 8L16 17L2 22ZM5.3 18.7L12.35 16.2L7.8 11.65L5.3 18.7ZM14.55 12.55L13.5 11.5L19.1 5.9C19.6333 5.36667 20.275 5.1 21.025 5.1C21.775 5.1 22.4167 5.36667 22.95 5.9L23.55 6.5L22.5 7.55L21.9 6.95C21.6667 6.71667 21.375 6.6 21.025 6.6C20.675 6.6 20.3833 6.71667 20.15 6.95L14.55 12.55ZM10.55 8.55L9.5 7.5L10.1 6.9C10.3333 6.66667 10.45 6.38333 10.45 6.05C10.45 5.71667 10.3333 5.43333 10.1 5.2L9.45 4.55L10.5 3.5L11.15 4.15C11.6833 4.68333 11.95 5.31667 11.95 6.05C11.95 6.78333 11.6833 7.41667 11.15 7.95L10.55 8.55ZM12.55 10.55L11.5 9.5L15.1 5.9C15.3333 5.66667 15.45 5.375 15.45 5.025C15.45 4.675 15.3333 4.38333 15.1 4.15L13.5 2.55L14.55 1.5L16.15 3.1C16.6833 3.63333 16.95 4.275 16.95 5.025C16.95 5.775 16.6833 6.41667 16.15 6.95L12.55 10.55ZM16.55 14.55L15.5 13.5L17.1 11.9C17.6333 11.3667 18.275 11.1 19.025 11.1C19.775 11.1 20.4167 11.3667 20.95 11.9L22.55 13.5L21.5 14.55L19.9 12.95C19.6667 12.7167 19.375 12.6 19.025 12.6C18.675 12.6 18.3833 12.7167 18.15 12.95L16.55 14.55Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 footer {
-    margin: 400px 0 0 0;
+    padding: 85px 0 100px 0;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 37px;
+}
+footer .f_nav ul li {
+    position: relative; /* before 정렬의 기준 */
+}
+footer .f_nav ul li::before {
+    content: "";
+    position: absolute;/* li를 기준으로 정렬 */
+    left: -20px;
+    top: 8px;
+    width: 1px;
+    height: 13px;
+    background-color: #1d1d1d;
+}
+footer .f_nav ul li:first-child:before {
+    display: none; /* 숨김 */
+}
+footer .f_nav ul li a:hover {
+    text-decoration: underline;
+}
+footer .f_info {
+    margin: 59px 0 46px 0;
+    display: flex;
+    gap: 18px;
+}
+footer .copyright p {
+    margin: 8px 0 0 0;
+}
+footer .copyright p strong {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .copyright p strong::after {
+    content: "";
+    position: absolute; /* strong을 기준으로 정렬 */
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
 }
