@@ -85,7 +85,7 @@ header .tnb .lang {
                 display: block; /* none으로 숨김요소를 다른속성만 주면 나타남 */
                 width: 56px;
                 height: 56px;
-                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 25.8332V22.1665H33.5V25.8332H0.5ZM0.5 18.4998V14.8332H33.5V18.4998H0.5ZM0.5 11.1665V7.49984H33.5V11.1665H0.5ZM0.5 3.83317V0.166504H33.5V3.83317H0.5Z' fill='white'/%3E%3C/svg%3E%0A");
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.75 23.25V20.75H23.25V23.25H0.75ZM0.75 13.25V10.75H23.25V13.25H0.75ZM0.75 3.25V0.75H23.25V3.25H0.75Z' fill='white'/%3E%3C/svg%3E%0A");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 20px;
