@@ -712,13 +712,13 @@ header .tnb .lang {
 }
 .service .list ul li a span {
     display: block;
-    font-size: 15px;
+    font-size: 10px;
 }
 .service .list ul li a strong {
     display: block;
     font-family: 'Gmarket Sans';
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.2;
     letter-spacing: -0.05em;
     color: #000B39;
