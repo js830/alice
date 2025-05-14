@@ -29,7 +29,7 @@ body {
     #wrap {
         min-width: 0; /* 최소넓이 없음 */
     }
-}
+}/*@media*/
 
 /* 글자를 숨겨야하는 경우 blind 클래스를 적용 */
 .blind {
