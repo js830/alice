@@ -633,10 +633,144 @@ header .tnb .search {
         width: 100%;
     }
 }/*@media*/
-@media screen and (max-width:640px){
+@media screen and (max-width:640px){ /* 모바일 */
+            .story {
+                margin: 110px 0 0 0;
+            }
+            .story .tit h2 {
+                font-size: 30px;
+                color: #1d1d1d;
+            }
+            .story .list {
+                margin: 51px 0 0 0;
+            }
+            .story .list ul {
+                display: block; /* flex 해제 */
+                justify-content: space-between;
+            }
+            .story .list ul li {
+                width:auto;
+                border: 0; /* 4곳에 들어가는 border 삭제 */
+                border-bottom: 1px solid #2A0800;
+                border-radius: 0;
+                padding: 19px 0;
+            }
+            .story .list ul li:first-child {
+                border-top: 1px solid #2A0800;
+            }
+            .story .list ul li a {
+                display: flex; /* photo, txt 좌우 배치*/
+                flex-direction: row-reverse; /* 좌우 반전 */
+                justify-content: space-between;
+            }
+            .story .list ul li a .photo {
+                /* width: 55% */
+                width: 120px;
+                height: 75px; /* 짧은거 */
+                border-radius: 0;
+            }
+            .story .list ul li a .txt {
+                width: 45%;
+                padding: 0;
+            }.story .list ul li a .txt h3 {
+                font-size: 15px;
+                margin: 4px 0 0 0;
 
+                /* 1줄 제한  -> 여러줄 허용 */
+                white-space: normal; /* 여러줄 허용 */
+                overflow: visible; /* 넘치는 요소 안짜름 */
+            }
+            .story .list ul li.long a .txt p {
+                display: none; /* 숨김 */
+            }
+            .story .more {
+                right: 0;
+                top: 4px;
+                width: 30px;
+                height: 30px;
+                padding: 0;
+                font-size: 20px;
+            }
+            .story .story .more::after {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: 15px;
+            }
+            .story .more span {
+                display: none; /* 숨김 */
+            }
 }/*@media*/
 
 footer {
-    margin: 500px 0 0 0;
+    margin: 140px 0 0 0;
+    padding: 97px 0 105px 0;
+    background-color: #CBB9A3;
+    color: #221411;
 }
+footer .wrapper {
+    display: flex; /* slogo, f_info 좌우 */
+    justify-content: space-between;
+    position: relative; /* copyright 정렬의 기준 */
+}
+footer .slogan p {
+    font-size: 40px;
+}
+footer .f_info h3 {
+    font-size: 20px;
+    margin: 0 0 18px 0;
+}
+footer .f_info address,
+footer .f_info ul.tel {
+    margin-bottom: 37px;
+}
+footer .f_info ul.sns {
+    display: flex;
+    gap: 13px;
+}
+footer .copyright {
+    position: absolute; /* wrapper를 기준으로 정렬 */
+    left: 0;
+    bottom: 0;
+}
+footer .copyright .f_logo {
+    margin: 0 0 16px 0;
+}
+footer .copyright .f_logo img {
+    width: 120px;
+}
+@media screen and (max-width:640px){
+            footer {
+                margin: 110px 0 0 0;
+                padding: 65px 0 100px 0;
+            }
+            footer .wrapper {
+                display: block; /* slogo, f_info 좌우 */
+            }
+            footer .slogan p {
+                font-size: 30px;
+            }
+            footer .f_info {
+                margin: 65px 0 0 0;
+            }
+            footer .f_info h3 {
+                font-size: 15px;
+                margin: 0 0 5px 0;
+            }
+            footer .f_info address,
+            footer .f_info ul.tel {
+                margin-bottom: 30px;
+            }
+            footer .copyright {
+                position: relative; /* absolute 해제 */
+                left: auto;
+                bottom: auto;
+                margin: 60px 0 0 0;
+            }
+            footer .copyright .f_logo {
+                margin: 0 0 9px 0;
+            }
+            footer .copyright .f_logo img {
+                width: 100px;
+            }
+}/* @media */
