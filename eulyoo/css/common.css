@@ -41,6 +41,7 @@ body {
     overflow: hidden;
     color: transparent;
 }
+/* 글자를 드래그 했을때 나타나는 스타일 */
 ::selection {
     color: #1d1d1d;
     background-color: #F4DBD7;
