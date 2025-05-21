@@ -131,9 +131,6 @@
     }
     .biz .tit h2 {
         font-size: 50px;
-        font-weight: 800;
-        line-height: 1.2;
-        color: #1d1d1d;
     }
     .biz .list {
         margin: 40px 0 0 0;
@@ -151,14 +148,93 @@
         object-fit: cover;
     }
     .biz .list ul li a h3 {
-        font-size: 25px;
-        font-weight: 800;
-        line-height: 1.2;
-        color: #1d1d1d;
-        margin: 20px 0 15px 0;
+        font-size: 20px;
+        margin: 15px 0 10px 0;
     }
-}
+}/*@media*/
 
+.notice {
+    background-color: #1446B1;
+    color: #fff;
+    padding: 175px 0 120px 0;
+    margin: 145px 0 0 0;
+}
+.notice h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.notice .list {
+    margin: 47px 0 0 0;
+    width: calc(50% + 630px);
+    /* wrapper사이즈 1260px의 절반 630px 더함 */
+    position: relative;
+    left: calc(50% - 630px);
+}
+.notice .list ul li {
+    width: 530px;
+}
+.notice .list ul li a {
+    display: block;
+    background-color: #fff;
+    color: #1d1d1d;
+    border-radius: 30px;
+}
+.notice .list ul li a .photo {
+    overflow: hidden;
+    height: 320px;
+    border-radius: 30px 30px 0 0;
+}
+.notice .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notice .list ul li a .txt {
+    padding: 45px 30px;
+}
+.notice .list ul li a .txt h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 15px 0;
+}
+@media screen and (max-width:1300px){
+    .notice .list {
+        width: calc(100% - 20px);
+        left: 20px;
+    }
+}/*@media*/
+@media screen and (max-width:768px){
+    .notice {
+        padding: 75px 0 55px 0;
+        margin: 90px 0 0 0;
+    }
+    .notice h2 {
+        font-size: 25px;
+    }
+    .notice .list {
+        margin: 47px 0 0 0;
+    }
+    .notice .list ul li {
+        width: 250px;
+    }
+    .notice .list ul li a {
+        border-radius: 10px;
+    }
+    .notice .list ul li a .photo {
+        height: 200px;
+        border-radius: 10px 10px 0 0;
+    }
+    .notice .list ul li a .txt {
+        padding: 25px 20px;
+    }
+    .notice .list ul li a .txt h3 {
+        font-size: 20px;
+        margin: 0 0 8px 0;
+    }
+}/*@media*/
 footer {
     margin: 500px 0 0 0;
 }
