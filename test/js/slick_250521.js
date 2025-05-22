@@ -11,8 +11,8 @@ $(document).ready(function(){
     });
 
     $('.visual .btn_wrap .ctrl_stop').on('click', function(){
-        $('.visual .popup .popup_wrap').slick('slickPause');
+        $('.visual .popup .popup_wrap').slick('slickPause'); /* 일시정지 기능 */
     })
-    $('.클래스명').slick('slickPause');  /* 일시정지 기능 */
+
     $('.클래스명').slick('slickPlay');  /* 재생 기능 */
 })

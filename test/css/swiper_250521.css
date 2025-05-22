@@ -2,9 +2,7 @@
 @import url(font.css);
 @import url(common_full.css);
 
-.visual .swiper {
-    height: 800px;
-}
+
 .visual .swiper-slide {
     height: 800px;
     background-position: center center;
@@ -22,9 +20,9 @@
     background-image: url(../images/popup03.jpg);
 }
 .visual h3 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 800;
-    padding: 327px 0 10px 0;
+    padding: 342px 0 20px 0;
 }
 .visual .paging {
     position: absolute; /* swiper를 기준으로 */
@@ -33,10 +31,10 @@
     z-index: 10;
     width: 100%;
     display: flex; /* span태그 좌우 배치 */
-    justify-content: space-between; /* 가운데 */
+    justify-content: center; /* 가운데 */
     gap: 5px;
 }
-.visual .paging .swiper-paination-bullet { /* 동그라미 기본 스타일 */
+.visual .paging .swiper-pagination-bullet { /* 동그라미 기본 스타일 */
     display: block;
     width: 10px;
     height: 10px;
@@ -46,19 +44,18 @@
     background: none;
     opacity: 1;
 }
-.visual .paging .swiper-paination-bullet.swiper-paination-bullet-active {
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
     /* 현재 팝업 동그라미 */
     background-color: #fff;
-    
 }
 .visual .btn_prev {
     position: absolute; /* swiper */
-    left: 30px;
+    left: 20px;
     top: 368px;
     z-index: 10;
-    width: 30px;
-    height: 50px;
-    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_95_77' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_95_77)'%3E%3Cpath d='M33.3333 45.8333L12.5 25L33.3333 4.16666L37.0313 7.86457L19.8958 25L37.0313 42.1354L33.3333 45.8333Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    width: 28px;
+    height: 51px;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='52' viewBox='0 0 28 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75736 26L26.4724 46.715C27.0188 47.2614 27.285 47.9046 27.2713 48.6449C27.2571 49.3855 26.9768 50.029 26.4305 50.5754C25.8837 51.1217 25.2402 51.3949 24.5 51.3949C23.7598 51.3949 23.1163 51.1217 22.5695 50.5754L1.47423 29.522C0.976942 29.0247 0.608441 28.4676 0.368733 27.8507C0.129025 27.2338 0.00917053 26.6169 0.00917053 26C0.00917053 25.3831 0.129025 24.7661 0.368733 24.1492C0.608441 23.5323 0.976942 22.9752 1.47423 22.4779L22.5695 1.38198C23.1163 0.835645 23.7669 0.569584 24.5213 0.583792C25.2757 0.598001 25.9261 0.87827 26.4724 1.4246C27.0188 1.97094 27.2919 2.61444 27.2919 3.3551C27.2919 4.09531 27.0188 4.73858 26.4724 5.28492L5.75736 26Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -67,11 +64,12 @@
     right: 20px;
     top: 368px;
     z-index: 10;
-    width: 30px;
-    height: 70px;
-    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_95_80' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_95_80)'%3E%3Cpath d='M16.7184 45.8333L13.0205 42.1354L30.1559 25L13.0205 7.86459L16.7184 4.16667L37.5518 25L16.7184 45.8333Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    width: 28px;
+    height: 51px;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='52' viewBox='0 0 28 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75736 26L26.4724 46.715C27.0188 47.2614 27.285 47.9046 27.2713 48.6449C27.2571 49.3855 26.9768 50.029 26.4305 50.5754C25.8837 51.1217 25.2402 51.3949 24.5 51.3949C23.7598 51.3949 23.1163 51.1217 22.5695 50.5754L1.47423 29.522C0.976942 29.0247 0.608441 28.4676 0.368733 27.8507C0.129025 27.2338 0.00917053 26.6169 0.00917053 26C0.00917053 25.3831 0.129025 24.7661 0.368733 24.1492C0.608441 23.5323 0.976942 22.9752 1.47423 22.4779L22.5695 1.38198C23.1163 0.835645 23.7669 0.569584 24.5213 0.583792C25.2757 0.598001 25.9261 0.87827 26.4724 1.4246C27.0188 1.97094 27.2919 2.61444 27.2919 3.3551C27.2919 4.09531 27.0188 4.73858 26.4724 5.28492L5.75736 26Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center center;
+    transform: rotate(180deg);
 }
 
 @media screen and (max-width:1440px){
@@ -82,23 +80,23 @@
 }
 
 @media screen and (max-width:768px){
-                .visual .swiper-slide {
-                    height: 800px;
-                }
-                .visual h3 {
-                    font-size: 30px;
-                    padding: 200px 0 10px 0;
-                }
-                .visual .paging {
-                    bottom: 30px;
-                }
+    .visual .swiper-slide {
+        height: 600px;
+    }
+    .visual h3 {
+        font-size: 30px;
+        padding: 205px 0 10px 0;
+    }
+    .visual .paging {
+        bottom: 30px;
+    }
 }/*@media*/
 
 .biz {
-    margin: 285px 0 0 0;
+    margin: 146px 0 0 0;
 }
 .biz .tit h2 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 800;
     line-height: 1.2;
     color: #1d1d1d;
@@ -109,11 +107,11 @@
 .biz .list ul li a {
     display: block;
 }
-.biz .list ul li a.photo {
+.biz .list ul li a .photo {
     overflow: hidden;
-    height: 220px;
+    height: 218px;
 }
-.biz .list ul li a.photo img {
+.biz .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -123,44 +121,37 @@
     font-weight: 800;
     line-height: 1.2;
     color: #1d1d1d;
-    margin: 20px 0 15px 0;
+    margin: 20px 0 13px 0;
 }
+
 @media screen and (max-width:768px){
     .biz {
-        margin: 285px 0 0 0;
+        margin: 71px 0 0 0;
     }
     .biz .tit h2 {
-        font-size: 50px;
+        font-size: 25px;
     }
     .biz .list {
-        margin: 40px 0 0 0;
+        margin: 24px 0 0 0;
     }
-    .biz .list ul li a {
-        display: block;
-    }
-    .biz .list ul li a.photo {
-        overflow: hidden;
-        height: 220px;
-    }
-    .biz .list ul li a.photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .biz .list ul li a .photo {
+        height: 197px;
     }
     .biz .list ul li a h3 {
         font-size: 20px;
-        margin: 15px 0 10px 0;
+        margin: 16px 0 9px 0;
     }
+    
 }/*@media*/
 
 .notice {
     background-color: #1446B1;
     color: #fff;
-    padding: 175px 0 120px 0;
-    margin: 145px 0 0 0;
+    padding: 175px 0 121px 0;
+    margin: 146px 0 0 0;
 }
-.notice h2 {
-    font-size: 50px;
+.notice .tit h2 {
+    font-size: 45px;
     font-weight: 800;
     line-height: 1.2;
 }
@@ -172,18 +163,18 @@
     left: calc(50% - 630px);
 }
 .notice .list ul li {
-    width: 530px;
+    width: 404px;
 }
 .notice .list ul li a {
     display: block;
     background-color: #fff;
-    color: #1d1d1d;
-    border-radius: 30px;
+    color: #555;
+    border-radius: 20px;
 }
 .notice .list ul li a .photo {
     overflow: hidden;
-    height: 320px;
-    border-radius: 30px 30px 0 0;
+    height: 326px;
+    border-radius: 20px 20px 0 0 ;
 }
 .notice .list ul li a .photo img {
     width: 100%;
@@ -191,14 +182,14 @@
     object-fit: cover;
 }
 .notice .list ul li a .txt {
-    padding: 45px 30px;
+    padding: 44px 30px;
 }
 .notice .list ul li a .txt h3 {
     font-size: 25px;
     font-weight: 800;
     line-height: 1.2;
     color: #1d1d1d;
-    margin: 0 0 15px 0;
+    margin: 0 0 13px 0;
 }
 @media screen and (max-width:1300px){
     .notice .list {
@@ -208,14 +199,14 @@
 }/*@media*/
 @media screen and (max-width:768px){
     .notice {
-        padding: 75px 0 55px 0;
+        padding: 75px 0 57px 0;
         margin: 90px 0 0 0;
     }
-    .notice h2 {
+    .notice .tit h2 {
         font-size: 25px;
     }
     .notice .list {
-        margin: 47px 0 0 0;
+        margin: 25px 0 0 0;
     }
     .notice .list ul li {
         width: 250px;
@@ -224,17 +215,18 @@
         border-radius: 10px;
     }
     .notice .list ul li a .photo {
-        height: 200px;
-        border-radius: 10px 10px 0 0;
+        height: 205px;
+        border-radius: 10px 10px 0 0 ;
     }
     .notice .list ul li a .txt {
         padding: 25px 20px;
     }
     .notice .list ul li a .txt h3 {
         font-size: 20px;
-        margin: 0 0 8px 0;
+        margin: 0 0 7px 0;
     }
 }/*@media*/
+
 footer {
     margin: 500px 0 0 0;
 }
