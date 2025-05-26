@@ -1,0 +1,157 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header {
+    position: fixed; /* body를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    display: flex; /* logo, gnb, util을 좌우로 배치 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header .logo a {
+    display: block;
+    width: 200px;
+    height: 35px;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만 보임 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex; /* li를 좌우로 배치 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    line-height: 100%; /* header 높이만큼 */
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 25px;
+}
+header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span {
+    /* li하위에 depth2가 있는 a만*/
+    display: block;
+    padding: 20px; /* 아이콘이 들어갈 만큼 */
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 15px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_278' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_278)'%3E%3Cpath d='M12.5 16.0418L6.25 9.79183L7.70833 8.3335L12.5 13.1252L17.2917 8.3335L18.75 9.79183L12.5 16.0418Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    display: none; /* 2차메뉴 */
+}
+header .util .search .search_open {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_274' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_274)'%3E%3Cpath d='M24.5 26.25L16.625 18.375C16 18.875 15.2812 19.2708 14.4688 19.5625C13.6562 19.8542 12.7917 20 11.875 20C9.60417 20 7.68229 19.2135 6.10938 17.6406C4.53646 16.0677 3.75 14.1458 3.75 11.875C3.75 9.60417 4.53646 7.68229 6.10938 6.10938C7.68229 4.53646 9.60417 3.75 11.875 3.75C14.1458 3.75 16.0677 4.53646 17.6406 6.10938C19.2135 7.68229 20 9.60417 20 11.875C20 12.7917 19.8542 13.6562 19.5625 14.4688C19.2708 15.2812 18.875 16 18.375 16.625L26.25 24.5L24.5 26.25ZM11.875 17.5C13.4375 17.5 14.7656 16.9531 15.8594 15.8594C16.9531 14.7656 17.5 13.4375 17.5 11.875C17.5 10.3125 16.9531 8.98438 15.8594 7.89062C14.7656 6.79688 13.4375 6.25 11.875 6.25C10.3125 6.25 8.98438 6.79688 7.89062 7.89062C6.79688 8.98438 6.25 10.3125 6.25 11.875C6.25 13.4375 6.79688 14.7656 7.89062 15.8594C8.98438 16.9531 10.3125 17.5 11.875 17.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.visual .swiper-slide {
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual .swiper-slide.bg1 {
+    background-image: url(../images/visual_bg1.jpg);
+}
+.visual .swiper-slide.bg2 {
+    background-image: url(../images/visual_bg2.jpg);
+}
+.visual .swiper-slide.bg3 {
+    background-image: url(../images/visual_bg3.jpg);
+}
+.visual .swiper-slide .wrapper {
+    height: 900px;
+    padding: 0 0 142px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.visual .swiper-slide p {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.visual .btn_wrap {
+    position: absolute; /* swiper을 기준으로 정렬 */
+    left: 0;
+    bottom: 30px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.visual .btn_wrap button {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.visual .btn_wrap button.btn_prev {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_291' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_291)'%3E%3Cpath d='M6.66667 9.16683L2.5 5.00016L6.66667 0.833496L7.40625 1.57308L3.97917 5.00016L7.40625 8.42725L6.66667 9.16683Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_294' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_294)'%3E%3Cpath d='M3.3431 9.16634L2.60352 8.42676L6.0306 4.99967L2.60352 1.57259L3.3431 0.833008L7.50977 4.99967L3.3431 9.16634Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_stop {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_297' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_297)'%3E%3Cpath d='M5.83333 7.91634V2.08301H7.5V7.91634H5.83333ZM2.5 7.91634V2.08301H4.16667V7.91634H2.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play {
+    display: none; /* 정지버튼을 눌렀을때만 나옴 */
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_44_297' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='12' height='12'%3E%3Crect width='12' height='12' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_44_297)'%3E%3Cpath d='M5 8.5V3.5L7.5 6L5 8.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1024px){
+            .visual .swiper-slide .wrapper {
+                height: 700px;
+                padding: 0 0 100px 0;
+            }
+            .visual .swiper-slide p {
+                font-size: 45px;
+            }
+            .visual .btn_wrap {
+                left: 20px;
+                bottom: 25px;
+                width: auto;
+            }
+            .visual .btn_wrap button.btn_prev {
+                display: none;
+            }
+            .visual .btn_wrap button.btn_next {
+                display: none;
+            }
+}
+@media screen and (max-width:768px){
+            .visual .swiper-slide .wrapper {
+                height: 474px;
+                padding: 0 0 86px 0;
+            }
+            .visual .swiper-slide p {
+                font-size: 30px;
+            }    
+}
+footer {
+    margin: 500px 0 0 0;
+}

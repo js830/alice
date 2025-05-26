@@ -1,0 +1,19 @@
+/* 웹폰트를 선언 */
+@font-face {
+    font-family: 'CookieRun';
+    src: url('../fonts/CookieRun-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CookieRun';
+    src: url('../fonts/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CookieRun';
+    src: url('../fonts/CookieRunOTF-Black00.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
