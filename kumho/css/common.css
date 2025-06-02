@@ -1,0 +1,89 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+/* 모든페이지에 공통으로 들어가는 기본 스타일 */
+html, body {
+    font-family: "Namdhinggo", "Pretendard", sans-serif;
+    /* 앞에 쓴 서채를 적용하고 지원이 안되면 두번째 서채를 적용 */
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5; /* 배수 */
+    color: #1d1d1d;
+    word-break: keep-all; /* 스페이스기준 단어별로 줄바꿈 */
+    word-wrap: break-word;
+    /* 단어가 너무 긴경우 강제로 줄바꿈을 주는 방법  */
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 */
+}
+#wrap {
+    position: relative; /* header 정렬의 기준 */
+    overflow-x: hidden; /* 가로스크롤 삭제 */
+    width: 100%;
+}
+@media screen and (max-width:1300px){ /* 20+20 = 40 + 1260 = 1300 */
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){
+            /* 브라우저 넓이가 768px 이하에서만 작동 */
+            body {
+                font-size: 16px;
+            }
+}
+
+/* 글자를 숨겨야하는 경우 blind 클래스를 적용 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    color: transparent;
+}
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000; /* 맨위 */
+    width: 100%;
+}
+.skip_nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #F56765;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+}
+.skip_nav a:focus {
+    top: 0;
+}
+
+/* css 변수 */
+:root {
+    --header-h: 100px; /* header 높이 */
+    --tit-font-color:#1d1d1d;
+    --point-color: #C90F14;
+    --bold-weight: 700;
+    --tit-font-size: 2.35rem; /* 40px/17 = 2.35 */
+    --tit-line-height: 1.2;
+    --tit-ico: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11.9171C0 12.338 0.0590824 12.7662 0.228949 13.1649C0.967502 14.9813 2.82127 16.0962 5.18464 15.1511C5.75333 14.9222 21.4106 8.61664 21.4106 8.61664C21.4106 8.61664 15.2437 24.2477 15.0148 24.831C14.1137 27.0682 15.192 29.0987 17.031 29.7854C17.4372 29.933 17.8582 30.0069 18.2792 29.9995C19.7711 29.9921 21.0931 29.1061 21.7356 27.3488C21.839 27.083 29.5495 5.91425 29.7194 5.3974C29.8154 5.10206 30 4.39323 30 3.89853C30 2.85006 29.6086 1.86066 28.8626 1.11492C28.1241 0.376563 27.1566 0 26.1152 0C25.6204 0 25.2068 0.088603 24.5864 0.28796C24.2171 0.406097 4.33531 7.80445 2.63664 8.43944C0.930582 9.07442 0 10.4256 0 11.9171Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");;
+}
+@media screen and (max-width:1024px){
+    :root {
+        --header-h: 56px; /* header 높이 */
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --tit-font-size: 1.88rem;/* 30px/16 = 1.88 */
+    }
+}
