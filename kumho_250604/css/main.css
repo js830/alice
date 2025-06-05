@@ -538,6 +538,7 @@
                 display: none;
             }
 } /*@media*/
+
 .service .list {
     background: url(../images/main/service01.jpg) no-repeat center center / cover;
     color: #fff;
@@ -545,6 +546,7 @@
     height: 400px; /* 400/17 = 23.53(em) */
     display: flex; /* ul을 list의 높이 위아래 가운데 정렬 */
     align-items: center;
+    transition: 0.5s;
 }
 .service .list[data-bg="bg1"] {
     background-image: url(../images/main/service02.jpg);
@@ -610,3 +612,58 @@
 .service .list ul li a:hover .more {
     display: inline-block;
 }
+@media screen and (max-width:1024px){
+    .service .list ul li a h3 {
+        font-size: 1.6rem;
+    }
+    .service .list ul li a p {
+        display: none;
+    }
+    .service .list ul li a .more {
+        display: inline-block;
+        margin: 0;
+    }
+}
+@media screen and (max-width:768px){
+            .service .list {
+                height: auto;
+                display: block;
+            }
+            .service .list ul {
+                display: block;
+                width: auto; /* list가 flex의 영향으로 넓이가 필요 */
+                padding: 0;
+            }
+            .service .list ul li {
+                width: auto;
+            }
+            .service .list ul li + li::before {
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                width: 176px;
+                height: 1px;
+            }
+            .service .list ul li a {
+                display: inline-block;
+                margin: 0;
+                padding: 2.94em 0;
+            }
+            .service .list ul li a h3 {
+                font-size: 1.56rem;
+                margin: 0 0 0.31em 0;
+            }
+            .service .list ul li a .more {
+                display: inline-block;
+                border: 1px solid rgba(255,255,255,0.5);
+                padding: 0 27px 0 17px;
+                margin: 0;
+            }
+            .service .list ul li a .more::after {
+                right: 0.8em;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0.5em;
+                height: 0.5em;
+            }
+}/* @media */

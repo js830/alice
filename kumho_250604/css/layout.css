@@ -347,5 +347,132 @@ header.menu_over .util .search .search_open::after {
 }/*@media*/
 
 footer {
-    margin: 1500px 0 0 0;
+    background-color: var(--tit-color);
+    color: rgba(255,255,255,0.8);
 }
+footer .wrapper {
+    padding: 110px 0 130px 0;
+    position: relative; /* top버튼 정렬의 기준 */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer .top {
+    position: absolute; /* wrapper */
+    right: -110px;
+    top: 110px;
+    background-color: var(--point-color);
+    color: #fff;
+    padding: 11px 35px 5px 15px;
+}
+footer .top::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_51_795' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_51_795)'%3E%3Cpath d='M11 20V7.825L5.4 13.425L4 12L12 4L20 12L18.6 13.425L13 7.825V20H11Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .family_site {
+    position: relative; /* ul 정렬의 기준 */
+}
+footer .family_site .family_open {
+    display: block;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 30px 0 30px;
+    height: 42px;
+    position: relative; /* after 정렬의 기준 */
+}
+footer .family_site .family_open::after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: 14px;
+    width: 12px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_152_10' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_152_10)'%3E%3Cpath d='M10.6668 22.333L8.3335 19.9997L20.0002 8.33301L31.6668 19.9997L29.3335 22.333L20.0002 13.0413L10.6668 22.333Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .family_site ul {
+    display: none;
+    position: absolute; /* family_site 기준으로 정렬 */
+    left: 0;
+    bottom: 43px;
+    width: 100%;
+    background-color: #555555;
+    padding: 1em 0 1em 1.35em;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 2;
+}
+footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap; /* 여러줄 허용 */
+    gap: 0.2em 2.52em;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute;
+    right: -1.26em;
+    top: 0.4em;
+    width: 1px;
+    height: 0.64em;
+    background-color: rgba(255,255,255,0.2);
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 50px 0 30px 0;
+}
+footer .f_info span {
+    display: inline-block;
+    margin-right: 2.35em;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:1490px){
+            footer .top {
+                right: 0;
+                top: -0;
+                transform: translateY(-50%);
+                font-size: 15px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                padding: 1.4em 0 0 0;
+                text-align: center;
+            }
+            footer .top::after {
+                right: 50%;
+                transform: translateX(50%);
+                top: 0.65em;
+            }
+}/*@media*/
+@media screen and (max-width:1024px){
+            footer .wrapper {
+                padding: 4.875em 0 7.06em 0;
+                display: block;
+            }
+            footer .family_site {
+                position: relative; /* ul 정렬의 기준 */
+                margin: 0 0 2em 0;
+            }
+            footer .family_site .family_open {
+                padding: 0.51em 2.88em 0 1.35em;
+                width: 100%;
+                max-width: 400px;
+            }
+}/*@media*/

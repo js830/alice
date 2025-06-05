@@ -65,12 +65,12 @@ $(document).ready(function(){
 
     /******************* service 배경 변경 : 시작 **********************
      * .service .list ul li a에 마우스를 오버해서 a에 있는
-     * date-name값을 가져다가 list의 class명으로 줌
+     * data-name값을 가져다가 list의 class명으로 줌
     */
 
     let service_name //가져온 data-name 값을 저장
     $('.service .list ul li a').on('mouseenter', function(){
-        service_name = $(this).attr('date-name')
+        service_name = $(this).attr('data-name')
         console.log(service_name)
         $('.service .list').attr('data-bg', service_name)
     })
