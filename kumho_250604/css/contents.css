@@ -1,0 +1,85 @@
+/* 회사소개 > CEO인사말 */
+
+.ctn_ceo {
+    position: relative; /* before 정렬의 기준 */
+}
+.ctn_ceo::before {
+    content: "";
+    position: absolute;
+    left: 44px;
+    top: 0;
+    z-index: -1; /* ctn_ceo 영역 안에서 맨 아래 */
+    width: calc(100% - 5.18em);
+    height: 300px;
+    background-color: #EEEEEE;
+    border-radius: 0;
+}
+.ctn_ceo .wrapper {
+    position: relative; /* photo 정렬의 기준 */
+}
+.ctn_ceo .ceo_tit {
+    padding: 88px 0 0 593px;
+}
+.ctn_ceo .ceo_tit strong {
+    display: block;
+    color: var(--point-color);
+}
+.ctn_ceo .ceo_tit h2 {
+    font-size: 30px;
+    color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    font-weight: var(--bold-weight);
+    margin: 7px 0 45px 0;
+}
+.ctn_ceo .ceo_tit p {
+    color: #1d1d1d;
+}
+.ctn_ceo .photo {
+    position: absolute;
+    left: 0;
+    top: 107px;
+    width: 476px;
+    height: 719px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.ctn_ceo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ctn_ceo .ctn_detail {
+    margin: 132px 0 35px 45.63%;
+}
+.ctn_ceo .ctn_detail .sign {
+    display: flex;
+    margin: 24px 0 0 0;
+    gap: 2em;
+    align-items: center;
+}
+.ctn_ceo .ctn_detail .sign strong {
+    font-weight: var(--bold-weight);
+}
+
+/* 회사소개 > 찾아오시는길 */
+.ctn_map .map {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+.ctn_map .map iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+@media screen and (max-width:1300px){
+    .ctn_map .map {
+        left: 20px;
+        width: calc(100% - 20px);
+    }
+}
+.ctn_map h2 {
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
