@@ -12,19 +12,19 @@
     text-align: center;
     padding: 227px 0 0 0;
 }
-.sub_visual .bg1 {
+.sub_visual.bg1 {
     background-image: url(../images/sub/sub_visual01.jpg);
 }
-.sub_visual .bg2 {
+.sub_visual.bg2 {
     background-image: url(../images/sub/sub_visual02.jpg);
 }
-.sub_visual .bg3 {
+.sub_visual.bg3 {
     background-image: url(../images/sub/sub_visual03.jpg);
 }
-.sub_visual .bg4 {
+.sub_visual.bg4 {
     background-image: url(../images/sub/sub_visual04.jpg);
 }
-.sub_visual .bg5 {
+.sub_visual.bg5 {
     background-image: url(../images/sub/sub_visual05.jpg);
 }
 .sub_visual .breadcrumb ol {
@@ -110,8 +110,8 @@
 }
 @media screen and (max-width:768px){
             .page_tit {
-                margin: 113px 0 44px 0;
-                font-size: 50px;
+                margin: 65px 0 50px 0;
+                font-size: 30px;
                 font-weight: var(--bold-weight);
                 text-align: center;
                 color: var(--tit-color);
