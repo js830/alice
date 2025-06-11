@@ -146,7 +146,7 @@
 }
 /* 회사소개 > 연혁 */
 .ctn_history {
-    margin: 0 0 1059em 0;
+    margin: 0 0 10.59em 0;
 }
 .ctn_history .his_tit {
     margin: 76px 0 47px 0;
@@ -177,14 +177,27 @@
     display: flex;
     justify-content: space-between;
 }
-.ctn_history .his_year_group.reverse {
-    flex-direction: row-reverse; /* 가로반전 */
-}
 .ctn_history .his_year_group .year_tit {
-    width: 347px; /*** 테스트필요 ***/
+    max-width: 347px;
+    width: 35%;
 }
 .ctn_history .his_year_group .year_cont {
-    width: 670px; /*** 테스트필요 ***/
+    max-width: 670px;
+    width: 60%;
+    padding: 25px 0 0 48px;
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: #4d4d4d;
+    position: relative;
+}
+.ctn_history .his_year_group .year_cont::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 2px;
+    height: 46px;
+    background-color: #fff;
 }
 .ctn_history .his_year_group .year_tit h3 {
     font-size: var(--tit-font-size);
@@ -204,10 +217,146 @@
 }
 .ctn_history .his_year_group .year_cont h4 {
     font-size: 30px;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    margin: 0 0 20px 0;
+    position: relative; /* before 정렬의 기준 */
 }
-.ctn_history .his_year_group .year_cont ul {
-    margin: 1em 0 2.76em 0;
+.ctn_history .his_year_group .year_cont ul + h4 {
+    margin-top: 33px;
 }
+.ctn_history .his_year_group .year_cont h4::before {
+    content: "";
+    position: absolute;
+    left: -52px;
+    top: 11px;
+    z-index: 10;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #666;
+}
+.ctn_history .his_year_group .year_cont > *:last-child {
+    position: relative;
+}
+.ctn_history .his_year_group .year_cont > *:last-child::before {
+    content: "";
+    position: absolute;
+    left: -54px;
+    bottom: -10px;
+    width: 3px;
+    height: calc(100% + 50px);
+    background-color: #fff;
+}
+
+.ctn_history .his_year_group .year_cont ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.ctn_history .his_year_group .year_cont ul li strong {
+    display: block;
+    color: var(--tit-color);
+}
+.ctn_history .his_year_group .year_cont ul li span {
+    display: block;
+    width: calc(100% - 91px);
+}
+
 .ctn_history .his_nav {
     display: none; /* 임시로!! */
 }
+@media screen and (min-width:769px){
+    .ctn_history .his_year_group.reverse {
+        flex-direction: row-reverse; /* 가로반전 */
+    }
+    .ctn_history .his_year_group.reverse .year_cont {
+        padding-right: 50px;
+        padding-left: 0;
+        border-width: 0 0 0 1px;
+    }
+    .ctn_history .his_year_group.reverse .year_cont::before {
+        left: auto;
+        right: -2px;
+    }
+    
+    .ctn_history .his_year_group.reverse .year_cont > *:last-child::before {
+        left: auto;
+        right: -3em;
+    }
+    .ctn_history .his_year_group.reverse .year_cont h4::before {
+        left: auto;
+        right: -54px;
+    }
+    .ctn_history .his_year_group.reverse .year_cont {
+        text-align: right;
+    }
+    .ctn_history .his_year_group.reverse .year_cont ul li {
+        flex-direction: row-reverse;
+    }
+    
+}
+@media screen and (max-width:768px){
+            .ctn_history {
+                margin: 0 0 6em 0;
+            }
+            .ctn_history .his_tit {
+                margin: 1.56em 0 1.56em 0;
+            }
+            .ctn_history .his_tit h2 {
+                font-size: 30px;
+                margin: 29px 0 0 0;
+            }
+            .ctn_history .his_tit h2 br {
+                display: none;
+            }
+            .ctn_history .his_photo .photo {
+                height: 150px;
+            }
+            .ctn_history .his_year_group {
+                margin: 52px 0 52px 0;
+                display: block;
+            }
+            .ctn_history .his_year_group .year_tit {
+                max-width: none;
+                width: auto;
+            }
+            .ctn_history .his_year_group .year_cont {
+                max-width: 100%;
+                width: auto;
+                padding: 39px 0 0 47px;
+            }
+            .ctn_history .his_year_group .year_cont::before {
+                content: "";
+            }
+            .ctn_history .his_year_group .year_tit h3 br {
+                display: none;
+            }
+            .ctn_history .his_year_group .year_tit p {
+                display: none;
+            }
+            .ctn_history .his_year_group .year_tit .photo {
+                display: none;
+            }
+            .ctn_history .his_year_group .year_cont h4 {
+                font-size: 1.375em;
+            }
+            .ctn_history .his_year_group .year_cont ul + h4 {
+                margin-top: 52px;
+            }
+            .ctn_history .his_year_group .year_cont h4::before {
+                left: -53px;
+            }
+            .ctn_history .his_year_group .year_cont > *:last-child {
+                position: relative;
+            }
+            .ctn_history .his_year_group .year_cont > *:last-child::before {
+                left: -2em;
+                height: calc(100% + 2.8em);
+            }
+            .ctn_history .his_year_group .year_cont ul li span {
+                display: block;
+                width: calc(100% - 64px);
+            }
+}/*@media*/
