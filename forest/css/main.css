@@ -51,8 +51,6 @@
             max-width: 1260px;
             color: #fff;
             display: flex;
-            width: auto;
-            gap: 2px;
         }
 
         .visual .paging .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -138,8 +136,126 @@
                 font-size: 0;
                 line-height: 0;
             }
-}
+}/*@media*/
 
+.tree .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tree .tit h2 {
+    color: var(--main-color);
+    font-size: var(--display-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    margin: 0 0 5px 0;
+}
+.tree .tit h2 strong {
+    position: relative; /* after 정렬의 기준 */
+}
+.tree .tit h2 strong::after {
+    content: "+";
+    position: absolute;
+    right: -26px;
+    top: 0;
+    font-size: 40px;
+}
+.tree .tit {
+    width: 40%;
+}
+.tree .tree_ani {
+    position: relative; /* 구름, 태양 정렬의 기준 */
+    max-width: 627px;
+    width: calc(100% - 390px);
+    width: 58%;
+    margin: 10% 0 0 0;
+}
+.tree .tree_ani .img_tree {
+    width: 84%;
+    position: relative; /* z-index는 무조건 position이 있어야 함 */
+    z-index: 2;
+}
+.tree .tree_ani .img_cloud01 {
+    position: absolute;
+    left: -13%;
+    bottom: 22%;
+    z-index: 3;
+    width: 43.22%;
+    animation: tree_top 5s linear infinite;
+}
+.tree .tree_ani .img_cloud02 {
+    position: absolute;
+    width: 36.20%;
+    right: 2%;
+    top: 2%;
+    z-index: 5;
+    animation: tree_left 7s linear infinite;
+}
+.tree .tree_ani .img_sun {
+    position: absolute;
+    width: 23.76%;
+    right: 0%;
+    top: -9%;
+    z-index: 4;
+    animation: tree_rotate 7s linear infinite;
+}
+.tree .tree_ani .img_leaf {
+    position: absolute;
+    width: 11.16%;
+    right: 21%;
+    bottom: 11%;
+    z-index: 1;
+}
+@keyframes tree_left {
+    /* 왔다갔다하는 반복되는 애니메이션은 0%, 100% 같아야함 */
+    0% {transform: translateX(40px);}
+    50% {transform: translateX(-40px);}
+    100% {transform: translateX(40px);}
+}
+@keyframes tree_size {
+    /* 왔다갔다하는 반복되는 애니메이션은 0%, 100% 같아야함 */
+    0% {transform: scale(100%) translate(0,0); opacity: 1;}
+    50% {transform: scale(90%) translate(-50px, -20px); opacity: 0.8;}
+    100% {transform: scale(100%) translate(0,0); opacity: 1;}
+}
+@keyframes tree_top {
+    /* 왔다갔다하는 반복되는 애니메이션은 0%, 100% 같아야함 */
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+}
+@keyframes tree_rotate {
+    /* 왔다갔다하는 반복되는 애니메이션은 0%, 100% 같아야함 */
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@media screen and (max-width:768px){
+            .tree {
+                margin: 100px 0 47px 0;
+                text-align: center;
+            }
+            .tree .wrapper {
+                display: block;
+            }
+            .tree .tit h2 {
+                font-size: 40px;
+            }
+            .tree .tit h2 strong::after {
+                right: -16px;
+                font-size: 20px;
+            }
+            .tree .tit p br {
+                display: none; /* 줄바꿈 삭제 */
+            }
+            .tree .tit {
+                width: auto;
+            }
+            .tree .tree_ani {
+                max-width: 400px;
+                width: 80%;
+                margin: 40px auto 0 auto;
+            }
+}/*@media*/
 
 #fp-nav.fp-left {
     left: 20px; /* 왼쪽에서 떨어진 거리 */
@@ -210,6 +326,11 @@
     width: auto;
     padding: 0 5px;
     border-radius: 3px;
+}
+@media screen and (max-width:1024px){
+    #fp-nav {
+        display: none !important;
+    }
 }
 /********** 배경이 흰색일때 ****************/
 body.bg_white #fp-nav ul li .fp-tooltip {
