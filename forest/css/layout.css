@@ -15,7 +15,7 @@ header .logo a {
     display: block;
     width: 138px;
     height: 33px;
-    background: url(../images/common/logo_w.png) no-repeat center center;
+    background: url(../images/common/logo_w.png) no-repeat center center / contain;
 }
 @media screen and (min-width:1025px){
     /* 1025px이상에서만 적용 */
