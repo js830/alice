@@ -53,20 +53,112 @@ header .util .mypage {
     color: #fff;
     padding: 532px 0 0 32px;
 }
-section .inner {
+.reservation {
+    margin: -98px 0 0 0;
+}
+.reservation .inner {
     background-color: #F1F1F1;
     height: 184px;
     border-radius: 30px;
+    padding: 20px 30px 0 30px;
 }
-section .inner .tit {
+.reservation .inner .tit {
     display: flex;
     font-size: 17px;
-    font-weight: 400;
-    color: #666666;
-    gap: 40px;
-    padding: 26px 0 0 48px;
+    font-weight: 700;
+    gap: 7px;
 }
-section .inner .list {
+.reservation .inner .tit button {
+    color: #666666;
+    padding: 6px 17px 5px 18px;
+    border-radius: 20px;
+}
+.reservation .inner .tit button.active {
+    background-color: #002654;
+    color: #fff;
+}
+.reservation .inner .list {
     display: flex;
     font-size: 27px;
+    font-weight: 700;
+    margin: 36px 0 0 0;
+}
+.reservation .inner .list .start {
+    color: #1d1d1d;
+    border-bottom: 1px solid #656565;
+    width: 433px;
+    padding: 0 0 12px 0;
+}
+.reservation .inner .list .end {
+    position: relative; /* before 정렬의 기준 */
+    margin-left: 62px;
+    border-bottom: 1px solid #656565;
+    width: 431px;
+}
+.reservation .inner .list .end::before {
+    content: ""; /* 필수 */
+    position: absolute;
+    left: -46px;
+    top: 13px;
+    width: 32px;
+    height: 19px;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='19' viewBox='0 0 32 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_37_67' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='9' width='27' height='10'%3E%3Crect x='1' y='9' width='27' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37_67)'%3E%3Cpath d='M12.4459 18.7927L7.65332 14.0001L12.4459 9.20752L13.4044 10.166L10.2721 13.3154H21.3464V14.6847H10.2721L13.4215 17.8342L12.4459 18.7927Z' fill='%233D3D3D'/%3E%3C/g%3E%3Cmask id='mask1_37_67' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='12'%3E%3Crect width='32' height='12' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask1_37_67)'%3E%3Cpath d='M17.6332 10.2887L16.4901 9.10545L19.3887 6.20846H9.46826V4.57636H19.3887L16.4901 1.67937L17.6332 0.496094L22.5322 5.39241L17.6332 10.2887Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.reservation .inner .list .date {
+    position: relative;
+    padding: 13px 0 0 40px;
+    margin-left: 27px;
+    font-size: 17px;
+    border-bottom: 1px solid #656565;
+    width: 246px;
+}
+.reservation .inner .list .date::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_1090' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='31' height='31'%3E%3Crect width='30.8697' height='30.8697' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_1090)'%3E%3Cpath d='M6.43137 28.2975C5.72393 28.2975 5.11833 28.0457 4.61455 27.5419C4.11078 27.0381 3.85889 26.4325 3.85889 25.7251V7.71771C3.85889 7.01028 4.11078 6.40468 4.61455 5.9009C5.11833 5.39712 5.72393 5.14523 6.43137 5.14523H7.7176V2.57275H10.2901V5.14523H20.58V2.57275H23.1525V5.14523H24.4387C25.1461 5.14523 25.7518 5.39712 26.2555 5.9009C26.7593 6.40468 27.0112 7.01028 27.0112 7.71771V25.7251C27.0112 26.4325 26.7593 27.0381 26.2555 27.5419C25.7518 28.0457 25.1461 28.2975 24.4387 28.2975H6.43137ZM6.43137 25.7251H24.4387V12.8627H6.43137V25.7251Z' fill='%23002654'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.event .tit {
+    margin: 85px 0 48px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.event .list {
+    justify-content: space-between;
+}
+.event .list ul li {
+    display: flex;
+    width: 404px;
+}
+.event .list ul li a {
+
+}
+.event .list ul li.bg01 a {
+    display: block;
+    color: #fff;
+    height: 229px;
+    background-image: url(../images/main/bg01.jpg);
+}
+.event .list li.bg02 {
+    display: block;
+    color: #fff;
+    height: 229px;
+    background-image: url(../images/main/bg02.jpg);
+}
+.event .list li.bg03 {
+    display: block;
+    color: #fff;
+    height: 229px;
+    background-image: url(../images/main/bg03.jpg);
+}
+footer {
+    margin: 1000px 0 0 0;
 }
