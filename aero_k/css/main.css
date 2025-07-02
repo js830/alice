@@ -125,40 +125,123 @@ header .util .mypage {
     background-repeat: no-repeat;
     background-position: center center;
 }
-.event .tit {
-    margin: 85px 0 48px 0;
+.event .tit { /*****이벤트 메인글씨*******/
+    margin: 85px 0 28px 0;
     font-size: 30px;
     font-weight: 700;
     color: #1d1d1d;
 }
-.event .list {
+.event .list ul {
+    display: flex;
     justify-content: space-between;
 }
 .event .list ul li {
-    display: flex;
     width: 404px;
 }
-.event .list ul li a {
-
+.event .list ul li a { /***이벤트 박스 스타일****/
+    display: block;
+    height: 229px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+    padding: 53px 0 0 30px;
+}
+.event .list ul li a strong {
+    font-size: 17px;
+}
+.event .list ul li h3 {
+    font-size: 25px;
+    padding: 15px 0 0 0;
+    line-height: 30px;
+}
+.event .list ul li a h3 span {
+    color: #FEB81C;
 }
 .event .list ul li.bg01 a {
-    display: block;
-    color: #fff;
-    height: 229px;
     background-image: url(../images/main/bg01.jpg);
 }
-.event .list li.bg02 {
-    display: block;
-    color: #fff;
-    height: 229px;
+.event .list ul li.bg02 a {
     background-image: url(../images/main/bg02.jpg);
 }
-.event .list li.bg03 {
-    display: block;
-    color: #fff;
-    height: 229px;
+.event .list ul li.bg03 a {
     background-image: url(../images/main/bg03.jpg);
 }
+.travel .tit {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 83px 0 30px 0;
+    color: #1d1d1d;
+}
+.travel .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.travel .list ul li {
+    width: 297px;
+}
+.travel .list ul li a .photo {
+    overflow: hidden;
+    height: 297px;
+    border-radius: 30px;
+}
+.travel .list ul li a h3 span {
+    display: block;
+    font-weight: 400;
+    margin: 20px 0 0 30px;
+    color: #666666;
+}
+.travel .list ul li a h3 strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 3px 0 0 30px;
+    color: #1d1d1d;
+}
+.travel .list ul li a .pay {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+    gap: 5px;
+    margin: 12px 0 0 30px;
+}
+.travel .list ul li a .pay span {
+    color: #666666;
+    font-weight: 700;
+}
+.travel .list ul li a .pay strong {
+    font-size: 20px;
+    color: #101727;
+    font-weight: 700;
+}
+.travel .list ul li a .date {
+    margin: 6px 0 0 30px;
+}
+.price .tit {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 80px 0 35px 0;
+    color: #1d1d1d;
+}
+.price .list {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+.price .list .city ul {
+    display: flex;
+    justify-content: space-evenly;
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+    padding: 23px 21px 8px 21px;
+}
+.price .info {
+    display: flex;
+    justify-content: space-between;
+    color: #666666;
+    font-weight: 700;
+}
+
+
 footer {
     margin: 1000px 0 0 0;
 }
