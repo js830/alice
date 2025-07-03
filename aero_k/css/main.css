@@ -219,28 +219,117 @@ header .util .mypage {
 .price .tit {
     font-size: 30px;
     font-weight: 700;
-    margin: 80px 0 35px 0;
+    margin: 80px 0 25px 0;
     color: #1d1d1d;
 }
-.price .list {
+.price .list { /***항공권 가격표*****/
     background-color: #fff;
+    width: 1260px;
+    height: 382px;
     border-radius: 30px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
 }
 .price .list .city ul {
     display: flex;
-    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 75px;
     color: #666666;
     border-bottom: 1px solid #cccccc;
+    padding: 0 35px 0 35px;
+}
+.price .list .city ul li {
+    position: relative;
+}
+.price .list .city ul li a {
+    display: block;
     padding: 23px 21px 8px 21px;
+}
+.price .list .city ul li.active a {
+    color: #1d1d1d;
+    border-bottom: 3px solid #FF0000;
 }
 .price .info {
     display: flex;
     justify-content: space-between;
     color: #666666;
+    margin: 23px 30px 10px 30px;
+}
+.price .info strong { /****도쿄 최저가*******/
     font-weight: 700;
 }
-
+.price .pay {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 0 30px;
+}
+.price .graph ul {
+    display: flex;
+    color: #CAC2CF;
+    margin: 0 30px 40px 30px;
+    gap: 15px;
+}
+.graph ul li {
+    align-items: center;
+}
+.graph ul li .bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 150px;
+}
+.graph ul li .date {
+    display: block;
+}
+.graph ul li.y_h80 .bar span {
+    display: block;
+    width: 30px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #FEB81C;
+    margin-bottom: 5px;
+}
+.graph ul li.g_h100 .bar span {
+    display: block;
+    width: 30px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #9DA6B6;
+    margin-bottom: 5px;
+}
+.graph ul li.g_h120 .bar span {
+    display: block;
+    width: 30px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #9DA6B6;
+    margin-bottom: 5px;
+}
+.graph ul li.g_h150 .bar span {
+    display: block;
+    width: 30px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #9DA6B6;
+    margin-bottom: 5px;
+}
+.graph ul li.y_h70 .bar span {
+    display: block;
+    width: 30px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #FEB81C;
+    margin-bottom: 5px;
+}
+.graph ul li.y_h120 .bar span {
+    display: block;
+    width: 30px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #FEB81C;
+    margin-bottom: 5px;
+}
 
 footer {
     margin: 1000px 0 0 0;
