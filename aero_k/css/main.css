@@ -330,7 +330,115 @@ header .util .mypage {
     background-color: #FEB81C;
     margin-bottom: 5px;
 }
-
+.news .tit {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 84px 0 26px 0;
+}
+.news .news_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.news .news_wrap .notice {
+    position: relative; /*more정렬의 기준*/
+    width: 617px;
+    height: 413px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 46px 40px 0 40px;
+    border-radius: 20px;
+}
+.news .news_wrap .notice h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 24px 0;
+}
+.news .news_wrap .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCCCCC;
+    color: #101727;
+    padding: 25px 0 19px 0;
+}
+.news .news_wrap .notice ul li:last-child a {
+    border-bottom: 0;
+}
+.news .news_wrap .faq {
+    position: relative; /*more 정렬의기준*/
+    width: 617px;
+    height: 413px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 49px 40px 0 40px;
+    border-radius: 20px;
+}
+.news .news_wrap .faq h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 32px 0;
+}
+.news .more {
+    position: absolute;
+    right: 40px;
+    top: 52px;
+}
+.news .more span {
+    display: none;
+}
+.news .more::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_138_22' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='31' height='31'%3E%3Crect x='0.857422' y='0.626953' width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_138_22)'%3E%3Cpath d='M14.6074 26.877V16.877H4.60742V14.377H14.6074V4.37695H17.1074V14.377H27.1074V16.877H17.1074V26.877H14.6074Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.news .news_wrap .faq ul {
+    display: flex;
+    flex-wrap: wrap;
+    color: #101727;
+    margin: 0 9px 16px 0;
+}
+.news .news_wrap .faq ul li a {
+    display: inline-block;
+    margin: 0 10px 16px 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 30px;
+    padding: 15px 17px 15px 18px;
+    white-space: nowrap;
+}
 footer {
-    margin: 1000px 0 0 0;
+    position: relative;
+    height: 300px;
+    margin: 86px 0 0 0;
+    background-color: #002654;
+    color: #fff;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_group .f_info {
+    padding: 55px 0 0 0;
+}
+footer .f_group .f_info p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 29px;
+    margin: 0 0 19px 0;
+}
+footer .copyright {
+    margin: 23px 0 84px 0;
+}
+footer .sns ul {
+    display: flex;
+    gap: 30px;
+    margin: 55px 0 60px 96px;
 }
